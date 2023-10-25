@@ -9,3 +9,5 @@ My name is Ian
 I am a Year 3 Business Administration student, specializing in Finance.
 
 I am taking NM2207 in Semester 1, AY23/24.
+
+<iframe height="400" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp/"> </iframe>
