@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Ian's Webpage"
+  navbar:
+    left:
+      - href: index.qmd
+        text: "Page 1"
+      - href: about.qmd
+        text: "Page 2"
+
+format:
+  html:
+    theme: journal
+    css: styles.css
+    toc: true
+
+editor: visual
+
