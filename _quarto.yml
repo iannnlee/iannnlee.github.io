@@ -10,6 +10,8 @@ website:
         text: "Page 1"
       - href: about.qmd
         text: "Page 2"
+      - href: week11challenge.qmd
+        text: "Page 3"
 
 format:
   html:

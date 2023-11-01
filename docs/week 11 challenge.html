@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Ian’s Webpage - About</title>
+<title>Ian’s Webpage - wk11 challenge</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,11 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Page 1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
- <span class="menu-text">Page 2</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./week11challenge.html" rel="" target="">
+    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">Page 2</span></a>
   </li>  
 </ul>
@@ -145,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">wk11 challenge</h1>
 </div>
 
 
@@ -160,7 +156,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>About this site</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr) </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite) </span>
@@ -257,97 +252,7 @@ $ communityLevelsTimeseries      &lt;list&gt; [&lt;data.frame[1336 x 3]&gt;], [&
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>state,<span class="at">y=</span>population)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>) <span class="sc">+</span><span class="fu">labs</span>(<span class="at">x=</span><span class="st">"States"</span>,<span class="at">y=</span><span class="st">"Population"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="about_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>state,<span class="at">y=</span>(data<span class="sc">$</span>actuals<span class="sc">$</span>cases<span class="sc">/</span>population))) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"States"</span>,<span class="at">y=</span><span class="st">"Infected (%)"</span>)<span class="sc">+</span><span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="about_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a> time_series_transmission[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">1300</span>,<span class="at">by=</span><span class="dv">100</span>),]<span class="sc">%&gt;%</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">pivot_longer</span>(<span class="at">cols=</span>Alaska<span class="sc">:</span>District_of_Columbia,<span class="at">names_to=</span><span class="st">"Countries"</span>,<span class="at">values_to=</span><span class="st">"Transmission"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Date,<span class="at">y=</span>Transmission,<span class="at">colour=</span>Countries,<span class="at">group=</span>Countries)) <span class="sc">+</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>(<span class="at">show.legend=</span><span class="cn">TRUE</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Date"</span>,<span class="at">y=</span><span class="st">"Transmission Level"</span>)<span class="sc">+</span><span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="about_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data_to_plot <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">Date_Alaska =</span> time_series_cases<span class="sc">$</span>Alaska<span class="sc">$</span>date[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">1300</span>,<span class="at">by=</span><span class="dv">100</span>)],</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">Cases_Alaska=</span> time_series_cases<span class="sc">$</span>Alaska<span class="sc">$</span>cases[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">1300</span>,<span class="at">by=</span><span class="dv">100</span>)],<span class="at">Date_California =</span> time_series_cases<span class="sc">$</span>California<span class="sc">$</span>date[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">1300</span>,<span class="at">by=</span><span class="dv">100</span>)],</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="at">Cases_California =</span> time_series_cases<span class="sc">$</span>California<span class="sc">$</span>cases[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">1300</span>,<span class="at">by=</span><span class="dv">100</span>)],</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="at">Date_New_Jersey =</span> time_series_cases<span class="sc">$</span>New_Jersey<span class="sc">$</span>date[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">1300</span>,<span class="at">by=</span><span class="dv">100</span>)],</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="at">Cases_New_Jersey =</span> time_series_cases<span class="sc">$</span>New_Jersey<span class="sc">$</span>cases[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">1300</span>,<span class="at">by=</span><span class="dv">100</span>)],</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="at">Date_Tennessee =</span> time_series_cases<span class="sc">$</span>Tennessee<span class="sc">$</span>date[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">1300</span>,<span class="at">by=</span><span class="dv">100</span>)],</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="at">Cases_Tennessee =</span> time_series_cases<span class="sc">$</span>Tennessee<span class="sc">$</span>cases[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">1300</span>,<span class="at">by=</span><span class="dv">100</span>)],</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="at">Date_District_of_Columbia =</span> time_series_cases<span class="sc">$</span>District_of_Columbia<span class="sc">$</span>date[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">1300</span>,<span class="at">by=</span><span class="dv">100</span>)],<span class="at">Cases_District_of_Columbia =</span> time_series_cases<span class="sc">$</span>District_of_Columbia<span class="sc">$</span>cases[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">1300</span>,<span class="at">by=</span><span class="dv">100</span>)])</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>data_to_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 13 × 10
-   Date_Alaska Cases_Alaska Date_California Cases_California Date_New_Jersey
-   &lt;chr&gt;              &lt;int&gt; &lt;chr&gt;                      &lt;int&gt; &lt;chr&gt;          
- 1 2020-03-01            NA 2020-01-25                     1 2020-03-01     
- 2 2020-06-09           620 2020-05-04                 56333 2020-06-09     
- 3 2020-09-17          7413 2020-08-12                595097 2020-09-17     
- 4 2020-12-26         45247 2020-11-20               1096427 2020-12-26     
- 5 2021-04-05         63486 2021-02-28               3569578 2021-04-05     
- 6 2021-07-14         71539 2021-06-08               3798225 2021-07-14     
- 7 2021-10-22        132393 2021-09-16               4629146 2021-10-22     
- 8 2022-01-30        211117 2021-12-25               5291605 2022-01-30     
- 9 2022-05-10        252847 2022-04-04               9110544 2022-05-10     
-10 2022-08-18        289203 2022-07-13              10365785 2022-08-18     
-11 2022-11-26        299841 2022-10-21              11338846 2022-11-26     
-12 2023-03-06        307377 2023-01-29              11980312 2023-03-06     
-13 2023-06-14            NA 2023-05-09              12242634 2023-06-14     
-# ℹ 5 more variables: Cases_New_Jersey &lt;int&gt;, Date_Tennessee &lt;chr&gt;,
-#   Cases_Tennessee &lt;int&gt;, Date_District_of_Columbia &lt;chr&gt;,
-#   Cases_District_of_Columbia &lt;int&gt;</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'cowplot'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:lubridate':
-
-    stamp</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>fig1<span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data_to_plot, <span class="fu">aes</span>(<span class="at">x=</span>Date_Alaska,<span class="at">y=</span>Cases_Alaska)) <span class="sc">+</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Date"</span>,<span class="at">y=</span><span class="st">"Cases"</span>, <span class="at">title=</span><span class="st">"Alaska"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a> fig2<span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data_to_plot, <span class="fu">aes</span>(<span class="at">x=</span>Date_California,<span class="at">y=</span>Cases_California)) <span class="sc">+</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Date"</span>,<span class="at">y=</span><span class="st">"Cases"</span>, <span class="at">title=</span><span class="st">"California"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a> fig3<span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data_to_plot, <span class="fu">aes</span>(<span class="at">x=</span>Date_New_Jersey,<span class="at">y=</span>Cases_New_Jersey)) <span class="sc">+</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Date"</span>,<span class="at">y=</span><span class="st">"Cases"</span>, <span class="at">title=</span><span class="st">"New Jersey"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a> fig4<span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data_to_plot, <span class="fu">aes</span>(<span class="at">x=</span>Date_Tennessee,<span class="at">y=</span>Cases_Tennessee)) <span class="sc">+</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Date"</span>,<span class="at">y=</span><span class="st">"Cases"</span>, <span class="at">title=</span><span class="st">"Tennessee"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a> fig5<span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data_to_plot, <span class="fu">aes</span>(<span class="at">x=</span>Date_District_of_Columbia,<span class="at">y=</span>Cases_District_of_Columbia)) <span class="sc">+</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Date"</span>,<span class="at">y=</span><span class="st">"Cases"</span>, <span class="at">title=</span><span class="st">"District of Columbia"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a> <span class="fu">plot_grid</span>(fig1 <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.justification =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)),</span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>           fig2 <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.justification =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">0</span>)),</span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>           fig3 <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.justification =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)),</span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>           fig4 <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.justification =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">0</span>)),</span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>           fig5 <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.justification =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)),</span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>           <span class="at">align =</span> <span class="st">"v"</span>, <span class="at">axis =</span> <span class="st">"lr"</span>, <span class="at">nrow=</span><span class="dv">3</span>,</span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>           <span class="at">ncol =</span> <span class="dv">2</span>,<span class="at">labels =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>],</span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>           <span class="at">rel_heights =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).
-Removed 2 rows containing missing values (`geom_point()`).
-Removed 2 rows containing missing values (`geom_point()`).
-Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<p><img src="about_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+<p><img src="week-11-challenge_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
