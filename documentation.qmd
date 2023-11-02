@@ -1,0 +1,20 @@
+---
+title: "documentation"
+---
+
+### Welcome to my documentation!
+
+<https://github.com/iannnlee/nm2207>
+
+(placeholder) replace this link with my documentation
+
+(placeholder) graph 1
+Age VS Relationship Status
+
+(placeholder) graph 2
+Sex VS Relationship Status
+
+(placeholder) graph 3
+Highest Qual Attained VS Relationship Status
+
+
