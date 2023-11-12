@@ -1,0 +1,12 @@
+name: IanShinyApp2
+title: IanShinyApp2
+username: iannnlee
+account: iannnlee
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10497728
+bundleId: 7917834
+url: https://iannnlee.shinyapps.io/IanShinyApp2/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

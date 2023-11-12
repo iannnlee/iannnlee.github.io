@@ -18,3 +18,93 @@ Sex VS Relationship Status
 Highest Qual Attained VS Relationship Status
 
 
+This code: clean data 3, 10 year window 2013-2022
+30-39 yr old
+```{r, echo=FALSE}
+library("tidyverse")
+
+clean_data3 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data3.csv")
+
+# Convert Year to a factor
+clean_data3$Year <- as.factor(clean_data3$Year)
+
+# Define the order of legend labels
+legend_order <- c("Below Secondary", "Secondary", "Post Secondary", "Diploma & Professional Qualification", "University")
+
+# Love-themed color palette
+love_colors <- c("#E4CDD3", "#E48397", "#E24767", "#B51A3A", "#5E081E")
+
+# Create Plot of Education Level vs Singlehood
+ggplot(clean_data3, aes(x = Year)) +
+  geom_line(aes(y = Below.Secondary, color = "Below Secondary", group = 1)) +
+  geom_line(aes(y = Secondary, color = "Secondary", group = 1)) +
+  geom_line(aes(y = Post.Secondary..Non.Tertiary., color = "Post Secondary", group = 1)) +
+  geom_line(aes(y = Diploma...Professional.Qualification, color = "Diploma & Professional Qualification", group = 1)) +
+  geom_line(aes(y = University, color = "University", group = 1)) +
+  labs(
+    title = "How does Education level affect Singlehood?\n(30-39 Years Old)",  
+    x = "Year",
+    y = "% of Population, Single"
+  ) +
+  scale_color_manual(values = setNames(love_colors, legend_order),
+                     breaks = legend_order) +
+  theme_void() +  
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(hjust = 0.5, size = 14),  # Adjust the size of the title text
+    plot.margin = margin(b = 40, t = 20),
+    axis.title.y = element_text(size = 10, angle = 90, margin = margin(r = 10)),  # Make y-axis label vertical
+    axis.title.x = element_text(size = 10, angle = 0, margin = margin(r = 10)),
+    axis.text = element_text(size = 10),  # Adjust the size of the axis text
+    legend.text = element_text(size = 7),  # Adjust the size of the legend text
+    legend.title = element_blank(),  # Remove legend title
+    legend.spacing.x = unit(0.1, 'cm')  # Adjust spacing between legend items
+  )
+```
+
+
+This code: clean data 4, 10 year window 2013-2022
+40-49 yr old
+```{r, echo=FALSE}
+clean_data4 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data4.csv")
+
+# Convert Year to a factor
+clean_data4$Year <- as.factor(clean_data4$Year)
+
+# Define the order of legend labels
+legend_order <- c("Below Secondary", "Secondary", "Post Secondary", "Diploma & Professional Qualification", "University")
+
+# Love-themed color palette
+love_colors <- c("#E4CDD3", "#E48397", "#E24767", "#B51A3A", "#5E081E")
+
+# Create Plot of Education Level vs Singlehood
+ggplot(clean_data4, aes(x = Year)) +
+  geom_line(aes(y = Below.Secondary, color = "Below Secondary", group = 1)) +
+  geom_line(aes(y = Secondary, color = "Secondary", group = 1)) +
+  geom_line(aes(y = Post.Secondary..Non.Tertiary., color = "Post Secondary", group = 1)) +
+  geom_line(aes(y = Diploma...Professional.Qualification, color = "Diploma & Professional Qualification", group = 1)) +
+  geom_line(aes(y = University, color = "University", group = 1)) +
+  labs(
+    title = "How does Education level affect Singlehood?\n(40-49 Years Old)",  
+    x = "Year",
+    y = "% of Population, Single"
+  ) +
+  scale_color_manual(values = setNames(love_colors, legend_order),
+                     breaks = legend_order) +
+  theme_void() +  
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(hjust = 0.5, size = 14),  # Adjust the size of the title text
+    plot.margin = margin(b = 40, t = 20),
+    axis.title.y = element_text(size = 10, angle = 90, margin = margin(r = 10)),  # Make y-axis label vertical
+    axis.title.x = element_text(size = 10, angle = 0, margin = margin(r = 10)),
+    axis.text = element_text(size = 10),  # Adjust the size of the axis text
+    legend.text = element_text(size = 7),  # Adjust the size of the legend text
+    legend.title = element_blank(),  # Remove legend title
+    legend.spacing.x = unit(0.1, 'cm')  # Adjust spacing between legend items
+  )
+```
+
+<iframe height="400" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp2/"> </iframe>
+
+
