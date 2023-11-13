@@ -3,18 +3,17 @@ project:
   output-dir: docs
 
 website:
-  title: "Ian's Webpage"
+  title: "NM2207 Project: Ian's Webpage"
   navbar:
     left:
-      - href: index.qmd
-        text: "Home"
-      - href: about.qmd
-        text: "Datastory (placeholder)"
+      - href: datastory.qmd
+        text: "Datastory"
       - href: documentation.qmd
         text: "Documentation (placeholder)"
-      - href: week11challenge.qmd
-        text: "wk 11 (to be deleted)"
-
+      - href: spare.qmd
+        text: "spare"
+      - href: aboutme.qmd
+        text: "About Me"
         
 
 format:

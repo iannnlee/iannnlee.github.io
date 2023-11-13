@@ -1,10 +1,10 @@
 ---
-title: "Datastory"
+title: "About this Project"
 ---
 
 Why are Singaporeans single???
 
-![placeholder for single singaporean image](https://www.nus.edu.sg/images/default-source/identity-images/NUS_logo_full-horizontal.jpg)
+![placeholder for single singaporean image](https://static.vecteezy.com/system/resources/previews/006/637/761/original/continuous-line-drawing-of-love-sign-with-two-hearts-embracing-simple-design-on-white-background-free-vector.jpg)
 
 ```{r, echo=FALSE}
 suppressMessages(library("tidyverse"))

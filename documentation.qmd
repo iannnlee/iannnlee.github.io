@@ -1,10 +1,9 @@
 ---
-title: "documentation"
+title: "Documentation"
 ---
 
 ### Welcome to my documentation!
 
-<https://github.com/iannnlee/nm2207>
 
 (placeholder) replace this link with my documentation
 
@@ -105,6 +104,10 @@ ggplot(clean_data4, aes(x = Year)) +
     legend.spacing.x = unit(0.1, 'cm')  # Adjust spacing between legend items
   )
 ```
+
+to delete: working shiny app <iframe height="400" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp/">
+</iframe>
+
 
 <iframe height="400" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp2/"> </iframe>
 

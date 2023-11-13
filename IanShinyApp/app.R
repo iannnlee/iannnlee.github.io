@@ -1,37 +1,59 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
+library(ggplot2)
 
-# Add UI for user input
+# Define UI
 ui <- fluidPage(
+  titlePanel("Education Level vs Singlehood"),
   sidebarLayout(
     sidebarPanel(
-      # Add UI components for user input. For example, a slider input.
-      sliderInput("obs", "Number of observations:", min = 0, max = 1000, value = 500)
+      selectInput("age_group", "Select Age Group", c("30-39", "40-49")),
+      selectInput("education_level", "Select Education Level", c("Below Secondary", "Secondary", "Post Secondary..Non.Tertiary.", "Diploma...Professional.Qualification", "University"))
     ),
     mainPanel(
-      plotOutput("distPlot")
+      plotOutput("plot1")
     )
   )
 )
 
-# Add server logic
+# Define server
 server <- function(input, output) {
-  output$distPlot <- renderPlot({
-    # Generate plot. For example, a histogram of a normal distribution.
-    x    <- rnorm(input$obs)
-    bins <- seq(min(x), max(x), length.out = 50)
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
+  
+  # Function to generate plots
+  generate_plot <- function(data, age_group, education_level) {
+    ggplot(data, aes(x = Year)) +
+      geom_line(aes(y = .data[[education_level]], color = education_level, group = 1)) +
+      labs(
+        title = paste("How does Education level affect Singlehood?\n(", age_group, " Years Old)"),  
+        x = "Year",
+        y = "% of Population, Single"
+      ) +
+      scale_color_manual(values = setNames(love_colors, legend_order),
+                         breaks = legend_order) +
+      theme_void() +  
+      theme(
+        legend.position = "bottom",
+        plot.title = element_text(hjust = 0.5, size = 14),
+        plot.margin = margin(b = 40, t = 20),
+        axis.title.y = element_text(size = 10, angle = 90, margin = margin(r = 10)),
+        axis.title.x = element_text(size = 10, angle = 0, margin = margin(r = 10)),
+        axis.text = element_text(size = 10),
+        legend.text = element_text(size = 7),
+        legend.title = element_blank(),
+        legend.spacing.x = unit(0.1, 'cm')
+      )
+  }
+  ?to
+  
+  # Render plot1
+  output$plot1 <- renderPlot({
+    age_group <- input$age_group
+    education_level <- input$education_level
+    data <- switch(age_group,
+                   "30-39" = clean_data3,
+                   "40-49" = clean_data4)
+    generate_plot(data, age_group, education_level)
   })
 }
 
-# Create Shiny app
-shinyApp(ui = ui, server = server)
-
+# Run the app
+shinyApp(ui, server)
