@@ -21,7 +21,8 @@ Highest Qual Attained VS Relationship Status
 This code: clean data 3, 10 year window 2013-2022
 30-39 yr old
 ```{r, echo=FALSE}
-library("tidyverse")
+suppressMessages(library("tidyverse"))
+
 
 clean_data3 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data3.csv")
 

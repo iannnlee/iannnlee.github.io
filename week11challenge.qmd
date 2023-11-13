@@ -3,7 +3,8 @@ title: "graph"
 ---
 ```{r, echo=FALSE}
 # Load the ggplot2 library
-library(ggplot2)
+suppressMessages(library(ggplot2))
+
 
 # Read the CSV file into a data frame
 data <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data5.csv")
@@ -29,7 +30,7 @@ ggplot(data_long, aes(x = Year, y = Percentage, fill = Status)) +
 
 ```{r, echo=FALSE}
 # Load the ggplot2 library
-library(ggplot2)
+suppressMessages(library(ggplot2))
 
 # Read the CSV file into a data frame
 data <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data5.csv")

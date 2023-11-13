@@ -7,7 +7,7 @@ Why are Singaporeans single???
 ![placeholder for single singaporean image](https://www.nus.edu.sg/images/default-source/identity-images/NUS_logo_full-horizontal.jpg)
 
 ```{r, echo=FALSE}
-library("tidyverse")
+suppressMessages(library("tidyverse"))
 
 clean_data <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data2.csv")
 
@@ -47,7 +47,7 @@ ggplot(clean_data, aes(x = Year)) +
 ```
 
 ```{r, echo=FALSE}
-library("tidyverse")
+suppressMessages(library("tidyverse"))
 
 clean_data <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data2.csv")
 
@@ -88,7 +88,7 @@ This code: clean data 3, 10 year window 2013-2022
 30-39 yr old
 
 ```{r, echo=FALSE}
-library("tidyverse")
+suppressMessages(library("tidyverse"))
 
 clean_data3 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data3.csv")
 
