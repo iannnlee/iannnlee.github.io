@@ -1,6 +1,11 @@
 ---
-title: "graph"
+title: "Age VS Singlehood"
 ---
+## Does age affect singlehood? {style="color: pink"}
+
+### (placeholder) title {style="color: black"}
+use 1 of of the next 2 graphs 
+
 ```{r, echo=FALSE}
 # Load the ggplot2 library
 suppressMessages(library(ggplot2))
@@ -26,8 +31,6 @@ ggplot(data_long, aes(x = Year, y = Percentage, fill = Status)) +
 
 ```
 
-
-
 ```{r, echo=FALSE}
 # Load the ggplot2 library
 suppressMessages(library(ggplot2))
@@ -51,4 +54,3 @@ ggplot(data_long, aes(x = Year, y = Percentage, fill = Status)) +
   theme_minimal()
 
 ```
-

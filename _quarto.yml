@@ -3,15 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "NM2207 Project: Ian's Webpage"
+  title: "NM2207 Project: Ian's Website"
   navbar:
     left:
       - href: datastory.qmd
         text: "Datastory"
       - href: documentation.qmd
-        text: "Documentation (placeholder)"
+        text: "Qualification Attained VS Singlehood"
       - href: spare.qmd
-        text: "spare"
+        text: "Age vs Singlehood"
       - href: aboutme.qmd
         text: "About Me"
         

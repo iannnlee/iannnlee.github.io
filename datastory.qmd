@@ -2,10 +2,14 @@
 title: "About this Project"
 ---
 
-Why are Singaporeans single???
+![](https://static.vecteezy.com/system/resources/previews/006/637/761/original/continuous-line-drawing-of-love-sign-with-two-hearts-embracing-simple-design-on-white-background-free-vector.jpg)
 
-![placeholder for single singaporean image](https://static.vecteezy.com/system/resources/previews/006/637/761/original/continuous-line-drawing-of-love-sign-with-two-hearts-embracing-simple-design-on-white-background-free-vector.jpg)
+## Why are Singaporeans single? {style="color: deeppink"}
 
+This project aims to...
+
+#### General Trend from 1990-2022 {style="color: black"}
+This graph represents the percentage of population Single, among those aged 30-39 years old. The general trend for 40-49 years old is similar to the graph below, but with a slightly lower percentage of singles across the board.
 ```{r, echo=FALSE}
 suppressMessages(library("tidyverse"))
 
@@ -45,47 +49,9 @@ ggplot(clean_data, aes(x = Year)) +
     legend.spacing.x = unit(0.1, 'cm')  # Adjust spacing between legend items
   )
 ```
+#### General Trend from 2013-2022 {style="color: black"}
 
-```{r, echo=FALSE}
-suppressMessages(library("tidyverse"))
-
-clean_data <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data2.csv")
-
-# Filter data for Secondary and University
-filtered_data <- clean_data %>%
-  select(Year, Secondary, University)
-
-# Define the order of legend labels
-legend_order <- c("Secondary", "University")
-
-# Create Plot of Education Level vs Singlehood
-ggplot(filtered_data, aes(x = Year)) +
-  geom_line(aes(y = Secondary, color = "Secondary")) +
-  geom_line(aes(y = University, color = "University")) +
-  labs(
-    title = "How does Education level affect Singlehood?\n(30-39 Years Old)",  # Use a line break for the title
-    x = "Year",
-    y = "Singlehood (%)"
-  ) +
-  scale_color_manual(values = c("Secondary" = "blue", "University" = "orange"),
-                     breaks = legend_order) +
-  theme_void() +  # Use theme_void() to remove both background grids and grid lines
-  theme(
-    legend.position = "bottom",
-    plot.title = element_text(hjust = 0.5, size = 14),  # Adjust the size of the title text
-    plot.margin = margin(b = 40, t = 20),
-    axis.title.y = element_text(size = 12, angle = 90),  # Make y-axis label vertical
-    axis.title.x = element_text(size = 12, angle = 0),
-    axis.text = element_text(size = 10),  # Adjust the size of the axis text
-    legend.text = element_text(size = 8),  # Adjust the size of the legend text
-    legend.title = element_blank(),  # Remove legend title
-    legend.spacing.x = unit(0.1, 'cm')  # Adjust spacing between legend items
-  )
-
-```
-
-This code: clean data 3, 10 year window 2013-2022
-30-39 yr old
+In order to make this project more relevant to the current situation, I have chosen the 10 most recent years (2013-2022) to conduct my analysis.
 
 ```{r, echo=FALSE}
 suppressMessages(library("tidyverse"))

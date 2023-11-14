@@ -37,22 +37,64 @@
   {
     "objectID": "documentation.html",
     "href": "documentation.html",
-    "title": "Documentation",
+    "title": "Qualification Attained VS Singlehood",
     "section": "",
-    "text": "Welcome to my documentation!\n(placeholder) replace this link with my documentation\n(placeholder) graph 1 Age VS Relationship Status\n(placeholder) graph 2 Sex VS Relationship Status\n(placeholder) graph 3 Highest Qual Attained VS Relationship Status\nThis code: clean data 3, 10 year window 2013-2022 30-39 yr old\n\n\n\n\n\nThis code: clean data 4, 10 year window 2013-2022 40-49 yr old\n\n\n\n\n\nto delete: working shiny app"
+    "text": "(placeholder) graph 1 Age VS Relationship Status\n(placeholder) graph 2 Highest Qual Attained VS Relationship Status\nTo make the comparison clearer, I analyses the percentage of singles for the Secondary and University categories.\n\n\n\n\n\nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary.\nThis code: clean data 3, 10 year window 2013-2022 30-39 yr old\n\n\n\n\n\nThis code: clean data 4, 10 year window 2013-2022 40-49 yr old\n\n\n\n\n\nto delete: working shiny app"
   },
   {
     "objectID": "aboutme.html",
     "href": "aboutme.html",
     "title": "About Me",
     "section": "",
-    "text": "Virtual hug for you! I hope you are having a great day!!!\n\n\nHello, I’m Ian! I’m currently in my third year as a Business Administration student with a specialisation in finance. I’m excited to be taking NM2207 in Semester 1 of the academic year 2023/2024.\nIn my free time, I’m an avid sports enthusiast, particularly passionate about basketball and football. I proudly support the LA Lakers and enjoy watching their games. I used to enjoy playing basketball as well but I got lazy :)\nLink to my Github: https://github.com/iannnlee/nm2207\nto delete: working shiny app &lt;/p&gt;"
+    "text": "Ian’s Website!!\n\nWelcome to my website!\n\n\n\nVirtual hug for you! I hope you are having a great day!!!\n\n\nHello, I’m Ian! I’m currently in my third year as a Business Administration student with a specialisation in finance. I’m excited to be taking NM2207 in Semester 1 of the academic year 2023/2024.\nIn my free time, I’m an avid sports enthusiast, particularly passionate about basketball and football. I proudly support the LA Lakers and enjoy watching their games. I used to enjoy playing basketball as well but I got lazy :)\nLink to my Github: https://github.com/iannnlee/nm2207"
   },
   {
     "objectID": "aboutme.html#welcome-to-my-website",
     "href": "aboutme.html#welcome-to-my-website",
     "title": "About Me",
     "section": "",
-    "text": "Virtual hug for you! I hope you are having a great day!!!\n\n\nHello, I’m Ian! I’m currently in my third year as a Business Administration student with a specialisation in finance. I’m excited to be taking NM2207 in Semester 1 of the academic year 2023/2024.\nIn my free time, I’m an avid sports enthusiast, particularly passionate about basketball and football. I proudly support the LA Lakers and enjoy watching their games. I used to enjoy playing basketball as well but I got lazy :)\nLink to my Github: https://github.com/iannnlee/nm2207\nto delete: working shiny app &lt;/p&gt;"
+    "text": "Virtual hug for you! I hope you are having a great day!!!\n\n\nHello, I’m Ian! I’m currently in my third year as a Business Administration student with a specialisation in finance. I’m excited to be taking NM2207 in Semester 1 of the academic year 2023/2024.\nIn my free time, I’m an avid sports enthusiast, particularly passionate about basketball and football. I proudly support the LA Lakers and enjoy watching their games. I used to enjoy playing basketball as well but I got lazy :)\nLink to my Github: https://github.com/iannnlee/nm2207"
+  },
+  {
+    "objectID": "datastory.html",
+    "href": "datastory.html",
+    "title": "About this Project",
+    "section": "",
+    "text": "placeholder for single singaporean image"
+  },
+  {
+    "objectID": "datastory.html#why-are-singaporeans-single",
+    "href": "datastory.html#why-are-singaporeans-single",
+    "title": "About this Project",
+    "section": "Why are Singaporeans single?",
+    "text": "Why are Singaporeans single?\nThis project aims to…\n\nGeneral Trend from 1990-2022\nThis graph represents the percentage of population Single, among those aged 30-39 years old. The general trend for 40-49 years old is similar to the graph below, but with a slightly lower percentage of singles across the board.\n\n\n\n\n\n\n\nGeneral Trend from 2013-2022\nIn order to make this project more relevant to the current situation, I have chosen the 10 most recent years (2013-2022) to conduct my analysis."
+  },
+  {
+    "objectID": "spare.html",
+    "href": "spare.html",
+    "title": "Age VS Singlehood",
+    "section": "",
+    "text": "use 1 of of the next 2 graphs"
+  },
+  {
+    "objectID": "documentation.html#does-age-affect-singlehood",
+    "href": "documentation.html#does-age-affect-singlehood",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "",
+    "text": "(placeholder) replace this link with my documentation\n(placeholder) graph 1 Age VS Relationship Status\n(placeholder) graph 2 Highest Qual Attained VS Relationship Status\nTo make the comparison clearer, I analyses the percentage of singles for the Secondary and University categories.\n\n\n\n\n\nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary.\nThis code: clean data 3, 10 year window 2013-2022 30-39 yr old\n\n\n\n\n\nThis code: clean data 4, 10 year window 2013-2022 40-49 yr old\n\n\n\n\n\nto delete: working shiny app"
+  },
+  {
+    "objectID": "documentation.html#does-highest-qualification-attained-affect-singlehood",
+    "href": "documentation.html#does-highest-qualification-attained-affect-singlehood",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "",
+    "text": "(placeholder) graph 1 Age VS Relationship Status\n(placeholder) graph 2 Highest Qual Attained VS Relationship Status\nTo make the comparison clearer, I analyses the percentage of singles for the Secondary and University categories.\n\n\n\n\n\nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary.\nThis code: clean data 3, 10 year window 2013-2022 30-39 yr old\n\n\n\n\n\nThis code: clean data 4, 10 year window 2013-2022 40-49 yr old\n\n\n\n\n\nto delete: working shiny app"
+  },
+  {
+    "objectID": "spare.html#does-age-affect-singlehood",
+    "href": "spare.html#does-age-affect-singlehood",
+    "title": "Age VS Singlehood",
+    "section": "",
+    "text": "use 1 of of the next 2 graphs"
   }
 ]

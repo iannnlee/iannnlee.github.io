@@ -1,21 +1,59 @@
 ---
-title: "Documentation"
+title: "Qualification Attained VS Singlehood"
 ---
+## Does highest qualification attained affect singlehood? {style="color: pink"}
 
-### Welcome to my documentation!
+### (placeholder) title {style="color: black"}
 
-
-(placeholder) replace this link with my documentation
 
 (placeholder) graph 1
 Age VS Relationship Status
 
 (placeholder) graph 2
-Sex VS Relationship Status
-
-(placeholder) graph 3
 Highest Qual Attained VS Relationship Status
 
+
+
+To make the comparison clearer, I analyses the percentage of singles for the Secondary and University categories. 
+```{r, echo=FALSE}
+suppressMessages(library("tidyverse"))
+
+clean_data <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data3.csv")
+
+# Filter data for Secondary and University
+filtered_data <- clean_data %>%
+  select(Year, Secondary, University)
+
+# Define the order of legend labels
+legend_order <- c("Secondary", "University")
+
+# Create Plot of Education Level vs Singlehood
+ggplot(filtered_data, aes(x = Year)) +
+  geom_line(aes(y = Secondary, color = "Secondary")) +
+  geom_line(aes(y = University, color = "University")) +
+  labs(
+    title = "How does Education level affect Singlehood?\n(30-39 Years Old)",  # Use a line break for the title
+    x = "Year",
+    y = "Singlehood (%)"
+  ) +
+  scale_color_manual(values = c("Secondary" = "#E48397", "University" = "#5E081E"),
+                     breaks = legend_order) +
+  scale_x_continuous(breaks = seq(2013, 2022, 1)) +  # Set breaks for the x-axis
+  theme_void() +  # Use theme_void() to remove both background grids and grid lines
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(hjust = 0.5, size = 14),  # Adjust the size of the title text
+    plot.margin = margin(b = 40, t = 20),
+    axis.title.y = element_text(size = 12, angle = 90),  # Make y-axis label vertical
+    axis.title.x = element_text(size = 12, angle = 0),
+    axis.text = element_text(size = 10),  # Adjust the size of the axis text
+    legend.text = element_text(size = 8),  # Adjust the size of the legend text
+    legend.title = element_blank(),  # Remove legend title
+    legend.spacing.x = unit(0.1, 'cm')  # Adjust spacing between legend items
+  )
+
+```
+We can see that those that fall under the University category have a higher percentage of singles as compared to Secondary. 
 
 This code: clean data 3, 10 year window 2013-2022
 30-39 yr old
