@@ -10,7 +10,6 @@ title: "About Me"
 
 <a href="https://youtu.be/dQw4w9WgXcQ?si=_0YSLZLTdgtjPtOI" target="_blank">
     ![***Virtual hug for you! I hope you are having a great day!!!***](https://i.ytimg.com/vi/wJO-MTh6NNo/maxresdefault.jpg){style="color: pink" fig-align="center" width="1080"}
-</a>
 
 Hello, I'm Ian! I'm currently in my third year as a Business Administration student with a specialisation in finance. I'm excited to be taking NM2207 in Semester 1 of the academic year 2023/2024.
 
