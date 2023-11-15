@@ -25,7 +25,7 @@ data_long <- gather(data, key = "Status", value = "Percentage", -Year)
 ggplot(data_long, aes(x = Year, y = Percentage, fill = Status)) +
   geom_bar(stat = "identity", position = "dodge") +
   labs(title = "Grouped Bar Graph of 30-39 Years", y = "Percentage", x = "Year") +
-  scale_fill_manual(values = c("Single" = "blue", "Non-Single" = "red")) +
+  scale_fill_manual(values = c("blue", "red")) +
   scale_x_continuous(breaks = unique(data$Year), labels = unique(data$Year)) +
   theme_minimal()
 

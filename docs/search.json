@@ -96,5 +96,33 @@
     "title": "Age VS Singlehood",
     "section": "",
     "text": "use 1 of of the next 2 graphs"
+  },
+  {
+    "objectID": "age.html",
+    "href": "age.html",
+    "title": "Age VS Singlehood",
+    "section": "",
+    "text": "use 1 of of the next 2 graphs"
+  },
+  {
+    "objectID": "age.html#does-age-affect-singlehood",
+    "href": "age.html#does-age-affect-singlehood",
+    "title": "Age VS Singlehood",
+    "section": "",
+    "text": "use 1 of of the next 2 graphs"
+  },
+  {
+    "objectID": "Qualification.html",
+    "href": "Qualification.html",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "",
+    "text": "(placeholder) graph 1 Age VS Relationship Status\n(placeholder) graph 2 Highest Qual Attained VS Relationship Status\nTo make the comparison clearer, I analyses the percentage of singles for the Secondary and University categories.\n\n\n\n\n\nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary.\nThis code: clean data 3, 10 year window 2013-2022 30-39 yr old\n\n\n\n\n\nThis code: clean data 4, 10 year window 2013-2022 40-49 yr old\n\n\n\n\n\nto delete: working shiny app"
+  },
+  {
+    "objectID": "Qualification.html#does-highest-qualification-attained-affect-singlehood",
+    "href": "Qualification.html#does-highest-qualification-attained-affect-singlehood",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "",
+    "text": "(placeholder) graph 1 Age VS Relationship Status\n(placeholder) graph 2 Highest Qual Attained VS Relationship Status\nTo make the comparison clearer, I analyses the percentage of singles for the Secondary and University categories.\n\n\n\n\n\nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary.\nThis code: clean data 3, 10 year window 2013-2022 30-39 yr old\n\n\n\n\n\nThis code: clean data 4, 10 year window 2013-2022 40-49 yr old\n\n\n\n\n\nto delete: working shiny app"
   }
 ]

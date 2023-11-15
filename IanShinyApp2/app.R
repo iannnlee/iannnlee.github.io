@@ -10,6 +10,15 @@
 library(shiny)
 library(ggplot2)
 
+clean_data3 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data3.csv")
+clean_data4 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data4.csv")
+
+# Define legend_order
+legend_order <- c("Below Secondary", "Secondary", "Post Secondary", "Diploma & Professional Qualification", "University")
+
+# Love-themed color palette
+love_colors <- c("#E4CDD3", "#E48397", "#E24767", "#B51A3A", "#5E081E")
+
 # Define UI
 ui <- fluidPage(
   titlePanel("Education Level vs Singlehood"),
@@ -39,6 +48,7 @@ server <- function(input, output) {
         x = "Year",
         y = "% of Population, Single"
       ) +
+      scale_x_continuous(breaks = seq(min(data$Year), max(data$Year), by = 1)) +  # Set breaks to whole numbers
       scale_color_manual(values = setNames(love_colors, legend_order),
                          breaks = legend_order) +
       theme_void() +  
@@ -54,7 +64,7 @@ server <- function(input, output) {
         legend.spacing.x = unit(0.1, 'cm')
       )
   }
-  
+
   # Render plot1
   output$plot1 <- renderPlot({
     age_group <- input$age_group

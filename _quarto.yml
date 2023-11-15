@@ -8,9 +8,9 @@ website:
     left:
       - href: datastory.qmd
         text: "Datastory"
-      - href: documentation.qmd
+      - href: Qualification.qmd
         text: "Qualification Attained VS Singlehood"
-      - href: spare.qmd
+      - href: age.qmd
         text: "Age vs Singlehood"
       - href: aboutme.qmd
         text: "About Me"

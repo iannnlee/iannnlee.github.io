@@ -1,5 +1,20 @@
+# Load libraries
 library(shiny)
 library(ggplot2)
+
+# Read data
+clean_data3 <- read.csv("clean_data3.csv")
+clean_data4 <- read.csv("clean_data4.csv")
+
+# Rename columns
+colnames(clean_data3) <- c("Year", "Below_Secondary", "Secondary", "Post_Secondary", "Diploma_Professional_Qualification", "University")
+colnames(clean_data4) <- c("Year", "Below_Secondary", "Secondary", "Post_Secondary", "Diploma_Professional_Qualification", "University")
+
+# Define legend_order
+legend_order <- c("Below_Secondary", "Secondary", "Post_Secondary", "Diploma_Professional_Qualification", "University")
+
+# Love-themed color palette
+love_colors <- c("#E4CDD3", "#E48397", "#E24767", "#B51A3A", "#5E081E")
 
 # Define UI
 ui <- fluidPage(
@@ -7,7 +22,7 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       selectInput("age_group", "Select Age Group", c("30-39", "40-49")),
-      selectInput("education_level", "Select Education Level", c("Below Secondary", "Secondary", "Post Secondary..Non.Tertiary.", "Diploma...Professional.Qualification", "University"))
+      selectInput("education_type", "Select Education Type", legend_order)
     ),
     mainPanel(
       plotOutput("plot1")
@@ -19,14 +34,15 @@ ui <- fluidPage(
 server <- function(input, output) {
   
   # Function to generate plots
-  generate_plot <- function(data, age_group, education_level) {
+  generate_plot <- function(data, age_group, education_type) {
     ggplot(data, aes(x = Year)) +
-      geom_line(aes(y = .data[[education_level]], color = education_level, group = 1)) +
+      geom_line(aes(y = get(education_type), color = education_type, group = 1)) +
       labs(
         title = paste("How does Education level affect Singlehood?\n(", age_group, " Years Old)"),  
         x = "Year",
         y = "% of Population, Single"
       ) +
+      scale_x_continuous(breaks = seq(min(data$Year), max(data$Year), by = 1)) +  # Set breaks to whole numbers
       scale_color_manual(values = setNames(love_colors, legend_order),
                          breaks = legend_order) +
       theme_void() +  
@@ -42,16 +58,15 @@ server <- function(input, output) {
         legend.spacing.x = unit(0.1, 'cm')
       )
   }
-  ?to
   
   # Render plot1
   output$plot1 <- renderPlot({
     age_group <- input$age_group
-    education_level <- input$education_level
+    education_type <- input$education_type
     data <- switch(age_group,
                    "30-39" = clean_data3,
                    "40-49" = clean_data4)
-    generate_plot(data, age_group, education_level)
+    generate_plot(data, age_group, education_type)
   })
 }
 
