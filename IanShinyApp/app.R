@@ -22,7 +22,7 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       selectInput("age_group", "Select Age Group", c("30-39", "40-49")),
-      selectInput("education_type", "Select Education Type", legend_order)
+      selectizeInput("education_type", "Select Education Type", choices = legend_order, multiple = TRUE)
     ),
     mainPanel(
       plotOutput("plot1")
@@ -34,15 +34,17 @@ ui <- fluidPage(
 server <- function(input, output) {
   
   # Function to generate plots
-  generate_plot <- function(data, age_group, education_type) {
+  generate_plot <- function(data, age_group, education_types) {
     ggplot(data, aes(x = Year)) +
-      geom_line(aes(y = get(education_type), color = education_type, group = 1)) +
+      lapply(education_types, function(education_type) {
+        geom_line(aes(y = get(education_type), color = education_type, group = education_type))
+      }) +
       labs(
         title = paste("How does Education level affect Singlehood?\n(", age_group, " Years Old)"),  
         x = "Year",
         y = "% of Population, Single"
       ) +
-      scale_x_continuous(breaks = seq(min(data$Year), max(data$Year), by = 1)) +  # Set breaks to whole numbers
+      scale_x_continuous(breaks = seq(min(data$Year), max(data$Year), by = 1)) +
       scale_color_manual(values = setNames(love_colors, legend_order),
                          breaks = legend_order) +
       theme_void() +  
@@ -62,11 +64,11 @@ server <- function(input, output) {
   # Render plot1
   output$plot1 <- renderPlot({
     age_group <- input$age_group
-    education_type <- input$education_type
+    education_types <- input$education_type
     data <- switch(age_group,
                    "30-39" = clean_data3,
                    "40-49" = clean_data4)
-    generate_plot(data, age_group, education_type)
+    generate_plot(data, age_group, education_types)
   })
 }
 
