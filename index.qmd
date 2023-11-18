@@ -6,10 +6,16 @@ title: "About Me"
 
 ### Welcome to my website! {style="color: black"}
 
-![***Virtual hug for you! I hope you are having a great day!!!***](https://i.ytimg.com/vi/wJO-MTh6NNo/maxresdefault.jpg){style="color: pink" fig-align="center" width="1080"}
+![***Virtual hug for you! I hope you are having a great day!!!***](https://i.ytimg.com/vi/wJO-MTh6NNo/maxresdefault.jpg){style="color: pink" fig-align="center" width="720"}
 
 Hello, I'm Ian! I'm currently in my third year as a Business Administration student with a specialisation in finance. I'm excited to be taking NM2207 in Semester 1 of the academic year 2023/2024.
 
 In my free time, I'm an avid sports enthusiast, particularly passionate about basketball and football. I proudly support the LA Lakers and enjoy watching their games. I used to enjoy playing basketball as well but I got lazy :)
 
 Link to my Github: <https://github.com/iannnlee/nm2207>
+
+
+<a href="https://cdn.vox-cdn.com/thumbor/Si2spWe-6jYnWh8roDPVRV7izC4=/0x0:1192x795/1400x788/filters:focal(596x398:597x399)/cdn.vox-cdn.com/uploads/chorus_asset/file/22312759/rickroll_4k.jpg" target="_blank">
+    ![](duckdrawing.jpeg){style="color: pink" fig-align="center" width="1080"}
+</a>
+
