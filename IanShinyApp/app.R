@@ -22,7 +22,7 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       selectInput("age_group", "Select Age Group", c("30-39", "40-49")),
-      selectizeInput("education_type", "Select Education Type", choices = legend_order, multiple = TRUE)
+      checkboxGroupInput("education_type", "Select Education Type", choices = legend_order, selected = character(0))
     ),
     mainPanel(
       plotOutput("plot1")
@@ -40,7 +40,7 @@ server <- function(input, output) {
         geom_line(aes(y = get(education_type), color = education_type, group = education_type))
       }) +
       labs(
-        title = paste("How does Education level affect Singlehood?\n(", age_group, " Years Old)"),  
+        title = paste("How does Education level affect Singlehood?\n(", age_group, "Years Old)"),  
         x = "Year",
         y = "% of Population, Single"
       ) +

@@ -1,79 +1,99 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
+# Load the necessary libraries
 library(shiny)
 library(ggplot2)
+library(tidyr)
 
-clean_data3 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data3.csv")
-clean_data4 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data4.csv")
+# Read the first CSV file
+data1 <- read.csv("clean_data5.csv")
+colnames(data1) <- c("Year", "Single_30_39", "Non_Single_30_39")
+data_long1 <- gather(data1, key = "Status", value = "Percentage", -Year)
 
-# Define legend_order
-legend_order <- c("Below Secondary", "Secondary", "Post Secondary", "Diploma & Professional Qualification", "University")
+# Read the second CSV file
+data2 <- read.csv("clean_data6.csv")
+colnames(data2) <- c("Year", "Single_40_49", "Non_Single_40_49")
+data_long2 <- gather(data2, key = "Status", value = "Percentage", -Year)
 
-# Love-themed color palette
-love_colors <- c("#E4CDD3", "#E48397", "#E24767", "#B51A3A", "#5E081E")
-
-# Define UI
+# Define the UI
 ui <- fluidPage(
-  titlePanel("Education Level vs Singlehood"),
+  titlePanel("Singles Averages by Age Group"),
   sidebarLayout(
     sidebarPanel(
-      selectInput("age_group", "Select Age Group", c("30-39", "40-49"))
+      selectInput("averageDuration", "Select Average Duration", 
+                  choices = c("10-year", "5-year", "2-year"), selected = "10-year"),
+      textOutput("averageNumbers")
     ),
     mainPanel(
-      plotOutput("plot1")
+      plotOutput("comparisonPlot")
     )
   )
 )
 
-# Define server
-server <- function(input, output) {
+# Define the server logic
+server <- function(input, output, session) {
   
-  # Function to generate plots
-  generate_plot <- function(data, age_group) {
-    ggplot(data, aes(x = Year)) +
-      geom_line(aes(y = Below.Secondary, color = "Below Secondary", group = 1)) +
-      geom_line(aes(y = Secondary, color = "Secondary", group = 1)) +
-      geom_line(aes(y = Post.Secondary..Non.Tertiary., color = "Post Secondary", group = 1)) +
-      geom_line(aes(y = Diploma...Professional.Qualification, color = "Diploma & Professional Qualification", group = 1)) +
-      geom_line(aes(y = University, color = "University", group = 1)) +
-      labs(
-        title = paste("How does Education level affect Singlehood?\n(", age_group, " Years Old)"),  
-        x = "Year",
-        y = "% of Population, Single"
-      ) +
-      scale_x_continuous(breaks = seq(min(data$Year), max(data$Year), by = 1)) +  # Set breaks to whole numbers
-      scale_color_manual(values = setNames(love_colors, legend_order),
-                         breaks = legend_order) +
-      theme_void() +  
-      theme(
-        legend.position = "bottom",
-        plot.title = element_text(hjust = 0.5, size = 14),
-        plot.margin = margin(b = 40, t = 20),
-        axis.title.y = element_text(size = 10, angle = 90, margin = margin(r = 10)),
-        axis.title.x = element_text(size = 10, angle = 0, margin = margin(r = 10)),
-        axis.text = element_text(size = 10),
-        legend.text = element_text(size = 7),
-        legend.title = element_blank(),
-        legend.spacing.x = unit(0.1, 'cm')
-      )
+  # Function to calculate average percentages
+  calculateAverages <- function(data, status, minYear, maxYear) {
+    subset_data <- subset(data, Status == status & Year >= minYear & Year <= maxYear)
+    return(mean(subset_data$Percentage))
   }
-
-  # Render plot1
-  output$plot1 <- renderPlot({
-    age_group <- input$age_group
-    data <- switch(age_group,
-                   "30-39" = clean_data3,
-                   "40-49" = clean_data4)
-    generate_plot(data, age_group)
+  
+  observe({
+    input$averageDuration
+    updateSelectInput(session, "averageDuration", selected = input$averageDuration)
+  })
+  
+  # Calculate average percentages based on user input
+  output$averageNumbers <- renderText({
+    if (input$averageDuration == "10-year") {
+      minYear <- 2013
+      maxYear <- 2022
+    } else if (input$averageDuration == "5-year") {
+      minYear <- 2018
+      maxYear <- 2022
+    } else if (input$averageDuration == "2-year") {
+      minYear <- 2021
+      maxYear <- 2022
+    }
+    
+    average_single_30_39 <- calculateAverages(data_long1, "Single_30_39", minYear, maxYear)
+    average_single_40_49 <- calculateAverages(data_long2, "Single_40_49", minYear, maxYear)
+    
+    paste("Average Single (30-39):", sprintf("%.2f", average_single_30_39), "\n",
+          "Average Single (40-49):", sprintf("%.2f", average_single_40_49))
+  })
+  
+  output$comparisonPlot <- renderPlot({
+    if (input$averageDuration == "10-year") {
+      minYear <- 2013
+      maxYear <- 2022
+    } else if (input$averageDuration == "5-year") {
+      minYear <- 2018
+      maxYear <- 2022
+    } else if (input$averageDuration == "2-year") {
+      minYear <- 2021
+      maxYear <- 2022
+    }
+    
+    average_single_30_39 <- calculateAverages(data_long1, "Single_30_39", minYear, maxYear)
+    average_single_40_49 <- calculateAverages(data_long2, "Single_40_49", minYear, maxYear)
+    
+    comparison_data <- data.frame(
+      Status = c("Single (30-39)", "Single (40-49)"),
+      Average_Percentage = c(average_single_30_39, average_single_40_49)
+    )
+    
+    p <- ggplot(comparison_data, aes(x = Status, y = Average_Percentage, fill = Status)) +
+      geom_bar(stat = "identity", position = "dodge") +
+      geom_text(aes(label = sprintf("%.2f", Average_Percentage)), position = position_dodge(width = 0.9), vjust = -0.5) +
+      labs(title = paste("Comparison of Average Single Status -", input$averageDuration), 
+           y = "Average Percentage", x = "Status") +
+      scale_fill_manual(values = c("#B19CF9", "#CDB6FA"), labels = c("30-39", "40-49")) +
+      scale_x_discrete(labels = c("Single (30-39)", "Single (40-49)")) +
+      theme_minimal()
+    
+    print(p)
   })
 }
 
-# Run the app
+# Run the Shiny app
 shinyApp(ui, server)

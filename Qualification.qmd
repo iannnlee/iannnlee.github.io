@@ -1,7 +1,7 @@
 ---
 title: "Qualification Attained VS Singlehood"
 ---
-## Does highest qualification attained affect singlehood? {style="color: pink"}
+## Does highest qualification attained affect singlehood? {style="color: #FE4164"}
 
 #### (placeholder) title {style="color: black"}
 
@@ -143,10 +143,9 @@ ggplot(clean_data4, aes(x = Year)) +
   )
 ```
 
-to delete: working shiny app <iframe height="600" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp/">
-</iframe>
+to edit: labels. change underscore to what i want
+<iframe height="600" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp/"> </iframe>
 
 
-<iframe height="400" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp2/"> </iframe>
 
 
