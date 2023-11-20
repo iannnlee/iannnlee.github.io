@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "About Me",
     "section": "",
-    "text": "Ian’s Website!!\n\nWelcome to my website!\n\n\n\nVirtual hug for you! I hope you are having a great day!!!\n\n\nHello, I’m Ian! I’m currently in my third year as a Business Administration student with a specialisation in finance. I’m excited to be taking NM2207 in Semester 1 of the academic year 2023/2024.\nIn my free time, I’m an avid sports enthusiast, particularly passionate about basketball and football. I proudly support the LA Lakers and enjoy watching their games. I used to enjoy playing basketball as well but I got lazy :)\nLink to my Github: https://github.com/iannnlee/nm2207"
+    "text": "Ian’s Website!!\n\nWelcome to my website!\n\n\n\nVirtual hug for you! I hope you are having a great day!!!\n\n\nHello, I’m Ian!  I’m currently in my third year as a Business Administration student with a specialisation in finance. I’m excited to be taking NM2207 in Semester 1 of the academic year 2023/2024.\nIn my free time, I’m an avid sports enthusiast, particularly passionate about basketball and football. I proudly support the LA Lakers and enjoy watching their games. I used to enjoy playing basketball as well but I got lazy :)\nLink to my Github: https://github.com/iannnlee/nm2207"
   },
   {
     "objectID": "index.html#welcome-to-my-website",
@@ -65,9 +65,9 @@
   {
     "objectID": "datastory.html#why-are-singaporeans-single",
     "href": "datastory.html#why-are-singaporeans-single",
-    "title": "About this Project",
+    "title": "About My Project",
     "section": "Why are Singaporeans single?",
-    "text": "Why are Singaporeans single?\nThis project aims to…\n\nGeneral Trend from 1990-2022\nThis graph represents the percentage of population Single, among those aged 30-39 years old. The general trend for 40-49 years old is similar to the graph below, but with a slightly lower percentage of singles across the board.\n\n\n\n\n\n\n\nGeneral Trend from 2013-2022\nIn order to make this project more relevant to the current situation, I have chosen the 10 most recent years (2013-2022) to conduct my analysis."
+    "text": "Why are Singaporeans single?\nThis project aims to…\nCurious to find out more? Click the picture below!\n\nGeneral Trend from 1990-2022\nThis graph represents the percentage of population Single, among those aged 30-39 years old. The general trend for 40-49 years old is similar to the graph below, but with a slightly lower percentage of singles across the board.\n\n\n\n\n\n\n\nGeneral Trend from 2013-2022\nIn order to make this project more relevant to the current situation, I have chosen the 10 most recent years (2013-2022) to conduct my analysis."
   },
   {
     "objectID": "spare.html",
@@ -102,27 +102,111 @@
     "href": "age.html",
     "title": "Age VS Singlehood",
     "section": "",
-    "text": "Now, we look at the status of the population. How many people are single? The graphs below provides further insight.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor “Single by Age Group” comparison, the data were from the following years:  10 Year Span: 2013-2022  5 Year Span: 2018-2022  2 Year Span: 2021-2022"
+    "text": "Now, we explore at the marriage status of the population.  How many people are single?  Is AGE a potential factor that affects Singlehood?  The graphs below provides further insight.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor “Singlehood by Age Group” comparison, the data were from the following years:  10 Year Span: 2013-2022  5 Year Span: 2018-2022  2 Year Span: 2021-2022  (click below to see the averages of the 2 different age groups)  \n\n\n\nAge is also a factor that affects Singlehood.  The results have shown that as Age increases, the percentage of Singles in the population decreases.  This trend is to be expected as more people will get married as they become older, with increased financial stability and increasing societal pressure to get married."
   },
   {
     "objectID": "age.html#does-age-affect-singlehood",
     "href": "age.html#does-age-affect-singlehood",
     "title": "Age VS Singlehood",
     "section": "",
-    "text": "Now, we look at the status of the population. How many people are single? The graphs below provides further insight.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor “Single by Age Group” comparison, the data were from the following years:  10 Year Span: 2013-2022  5 Year Span: 2018-2022  2 Year Span: 2021-2022"
+    "text": "Now, we look at the status of the population. How many people are single? The graphs below provides further insight.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor “Singlehood by Age Group” comparison, the data were from the following years:  10 Year Span: 2013-2022  5 Year Span: 2018-2022  2 Year Span: 2021-2022  (click below to see the averages of the 2 different age groups)  \nFor “Single by Age Group” comparison, the data were from the following years:  10 Year Span: 2013-2022  5 Year Span: 2018-2022  2 Year Span: 2021-2022"
   },
   {
     "objectID": "Qualification.html",
     "href": "Qualification.html",
     "title": "Qualification Attained VS Singlehood",
     "section": "",
-    "text": "(placeholder) graph 1 Age VS Relationship Status\n(placeholder) graph 2 Highest Qual Attained VS Relationship Status\nTo make the comparison clearer, I analyses the percentage of singles for the Secondary and University categories.\n\n\n\n\n\nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary.\nThis code: clean data 3, 10 year window 2013-2022 30-39 yr old\n\n\n\n\n\nThis code: clean data 4, 10 year window 2013-2022 40-49 yr old\n\n\n\n\n\nto edit: labels. change underscore to what i want"
+    "text": "(placeholder) graph 1 Age VS Relationship Status\n(placeholder) graph 2 Highest Qual Attained VS Relationship Status\nThis code: clean data 3, 10 year window 2013-2022 30-39 yr old\n\n\n\n\n\nThis code: clean data 4, 10 year window 2013-2022 40-49 yr old\n\n\n\n\n\nComparison between Highest Qualification Attained and Singlehood  \nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary."
   },
   {
     "objectID": "Qualification.html#does-highest-qualification-attained-affect-singlehood",
     "href": "Qualification.html#does-highest-qualification-attained-affect-singlehood",
     "title": "Qualification Attained VS Singlehood",
     "section": "",
-    "text": "(placeholder) graph 1 Age VS Relationship Status\n(placeholder) graph 2 Highest Qual Attained VS Relationship Status\nTo make the comparison clearer, I analyses the percentage of singles for the Secondary and University categories.\n\n\n\n\n\nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary.\nThis code: clean data 3, 10 year window 2013-2022 30-39 yr old\n\n\n\n\n\nThis code: clean data 4, 10 year window 2013-2022 40-49 yr old\n\n\n\n\n\nto edit: labels. change underscore to what i want"
+    "text": "(placeholder) graph 1 Age VS Relationship Status\n(placeholder) graph 2 Highest Qual Attained VS Relationship Status\nThis code: clean data 3, 10 year window 2013-2022 30-39 yr old\n\n\n\n\n\nThis code: clean data 4, 10 year window 2013-2022 40-49 yr old\n\n\n\n\n\nComparison between Highest Qualification Attained and Singlehood  \nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary."
+  },
+  {
+    "objectID": "age.html#placeholder",
+    "href": "age.html#placeholder",
+    "title": "Age VS Singlehood",
+    "section": "",
+    "text": "Now, we look at the status of the population. How many people are single? The graphs below provides further insight."
+  },
+  {
+    "objectID": "age.html#singlehood-by-age-group",
+    "href": "age.html#singlehood-by-age-group",
+    "title": "Age VS Singlehood",
+    "section": "",
+    "text": "For “Singlehood by Age Group” comparison, the data were from the following years:  10 Year Span: 2013-2022  5 Year Span: 2018-2022  2 Year Span: 2021-2022  (click below to see the averages of the 2 different age groups)"
+  },
+  {
+    "objectID": "age.html#marriage-status",
+    "href": "age.html#marriage-status",
+    "title": "Age VS Singlehood",
+    "section": "",
+    "text": "Now, we explore at the marriage status of the population.  How many people are single?  Is AGE a potential factor that affects Singlehood?  The graphs below provides further insight."
+  },
+  {
+    "objectID": "age.html#conclusion",
+    "href": "age.html#conclusion",
+    "title": "Age VS Singlehood",
+    "section": "",
+    "text": "Age is also a factor that affects Singlehood.  The results have shown that as Age increases, the percentage of Singles in the population decreases.  This trend is to be expected as more people will get married as they become older, with increased financial stability and increasing societal pressure to get married."
+  },
+  {
+    "objectID": "Qualification.html#placeholder-title",
+    "href": "Qualification.html#placeholder-title",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "(placeholder) title",
+    "text": "(placeholder) title\nThis code: clean data 3, 10 year window 2013-2022 30-39 yr old\n\n\n\n\n\nThis code: clean data 4, 10 year window 2013-2022 40-49 yr old\n\n\n\n\n\nComparison between Highest Qualification Attained and Singlehood  \nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary."
+  },
+  {
+    "objectID": "Qualification.html#conclusion",
+    "href": "Qualification.html#conclusion",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "Conclusion",
+    "text": "Conclusion"
+  },
+  {
+    "objectID": "Qualification.html#general-trend",
+    "href": "Qualification.html#general-trend",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "General Trend",
+    "text": "General Trend\nFirstly, we analyse how Highest Qualification Attained affects Singlehood in the 30-39 year old age group.\n\n\n\n\n\nNext, we analyse how Highest Qualification Attained affects Singlehood in the 40-49 year old age group."
+  },
+  {
+    "objectID": "Qualification.html#comparison-between-highest-qualification-attained-and-singlehood",
+    "href": "Qualification.html#comparison-between-highest-qualification-attained-and-singlehood",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "Comparison between Highest Qualification Attained and Singlehood",
+    "text": "Comparison between Highest Qualification Attained and Singlehood\n\n\nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary."
+  },
+  {
+    "objectID": "age.html#general-trend",
+    "href": "age.html#general-trend",
+    "title": "Age VS Singlehood",
+    "section": "",
+    "text": "Now, we explore at the marriage status of the population.  How many people are single?  Is AGE a potential factor that affects Singlehood?  The graphs below provides further insight."
+  },
+  {
+    "objectID": "qualification.html#general-trend",
+    "href": "qualification.html#general-trend",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "General Trend",
+    "text": "General Trend\nFirstly, we analyse how Highest Qualification Attained affects Singlehood in the 30-39 year old age group.\n\n\n\n\n\nNext, we analyse how Highest Qualification Attained affects Singlehood in the 40-49 year old age group."
+  },
+  {
+    "objectID": "qualification.html#comparison-between-highest-qualification-attained-and-singlehood",
+    "href": "qualification.html#comparison-between-highest-qualification-attained-and-singlehood",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "Comparison between Highest Qualification Attained and Singlehood",
+    "text": "Comparison between Highest Qualification Attained and Singlehood\n\n\n(provide further explanation)"
+  },
+  {
+    "objectID": "qualification.html#conclusion",
+    "href": "qualification.html#conclusion",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "Conclusion",
+    "text": "Conclusion\n(provide further explanation)"
   }
 ]

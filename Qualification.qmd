@@ -1,78 +1,23 @@
 ---
 title: "Qualification Attained VS Singlehood"
 ---
-## Does highest qualification attained affect singlehood? {style="color: #FE4164"}
+## Does Highest Qualification Attained Affect Singlehood? {style="color: #FE4164"}
 
-#### (placeholder) title {style="color: black"}
+## General Trend {style="color: black"}
 
-
-(placeholder) graph 1
-Age VS Relationship Status
-
-(placeholder) graph 2
-Highest Qual Attained VS Relationship Status
-
-
-
-To make the comparison clearer, I analyses the percentage of singles for the Secondary and University categories. 
-```{r, echo=FALSE}
-suppressMessages(library("tidyverse"))
-
-clean_data <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data3.csv")
-
-# Filter data for Secondary and University
-filtered_data <- clean_data %>%
-  select(Year, Secondary, University)
-
-# Define the order of legend labels
-legend_order <- c("Secondary", "University")
-
-# Create Plot of Education Level vs Singlehood
-ggplot(filtered_data, aes(x = Year)) +
-  geom_line(aes(y = Secondary, color = "Secondary")) +
-  geom_line(aes(y = University, color = "University")) +
-  labs(
-    title = "How does Education level affect Singlehood?\n(30-39 Years Old)",  # Use a line break for the title
-    x = "Year",
-    y = "Singlehood (%)"
-  ) +
-  scale_color_manual(values = c("Secondary" = "#E48397", "University" = "#5E081E"),
-                     breaks = legend_order) +
-  scale_x_continuous(breaks = seq(2013, 2022, 1)) +  # Set breaks for the x-axis
-  theme_void() +  # Use theme_void() to remove both background grids and grid lines
-  theme(
-    legend.position = "bottom",
-    plot.title = element_text(hjust = 0.5, size = 14),  # Adjust the size of the title text
-    plot.margin = margin(b = 40, t = 20),
-    axis.title.y = element_text(size = 12, angle = 90),  # Make y-axis label vertical
-    axis.title.x = element_text(size = 12, angle = 0),
-    axis.text = element_text(size = 10),  # Adjust the size of the axis text
-    legend.text = element_text(size = 8),  # Adjust the size of the legend text
-    legend.title = element_blank(),  # Remove legend title
-    legend.spacing.x = unit(0.1, 'cm')  # Adjust spacing between legend items
-  )
-
-```
-We can see that those that fall under the University category have a higher percentage of singles as compared to Secondary. 
-
-This code: clean data 3, 10 year window 2013-2022
-30-39 yr old
+Firstly, we analyse how Highest Qualification Attained affects Singlehood in the 30-39 year old age group.
 ```{r, echo=FALSE}
 suppressMessages(library("tidyverse"))
 
 
 clean_data3 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data3.csv")
 
-# Convert Year to a factor
 clean_data3$Year <- as.factor(clean_data3$Year)
 
-# Define the order of legend labels
 legend_order <- c("Below Secondary", "Secondary", "Post Secondary", "Diploma & Professional Qualification", "University")
 
-# Love-themed color palette
 love_colors <- c("#E4CDD3", "#E48397", "#E24767", "#B51A3A", "#5E081E")
 
-# Create Plot of Education Level vs Singlehood
 ggplot(clean_data3, aes(x = Year)) +
   geom_line(aes(y = Below.Secondary, color = "Below Secondary", group = 1)) +
   geom_line(aes(y = Secondary, color = "Secondary", group = 1)) +
@@ -89,33 +34,28 @@ ggplot(clean_data3, aes(x = Year)) +
   theme_void() +  
   theme(
     legend.position = "bottom",
-    plot.title = element_text(hjust = 0.5, size = 14),  # Adjust the size of the title text
+    plot.title = element_text(hjust = 0.5, size = 14),  
     plot.margin = margin(b = 40, t = 20),
-    axis.title.y = element_text(size = 10, angle = 90, margin = margin(r = 10)),  # Make y-axis label vertical
+    axis.title.y = element_text(size = 10, angle = 90, margin = margin(r = 10)),   
     axis.title.x = element_text(size = 10, angle = 0, margin = margin(r = 10)),
-    axis.text = element_text(size = 10),  # Adjust the size of the axis text
-    legend.text = element_text(size = 7),  # Adjust the size of the legend text
-    legend.title = element_blank(),  # Remove legend title
-    legend.spacing.x = unit(0.1, 'cm')  # Adjust spacing between legend items
+    axis.text = element_text(size = 10),  
+    legend.text = element_text(size = 7),  
+    legend.title = element_blank(),  
+    legend.spacing.x = unit(0.1, 'cm')  
   )
 ```
 
 
-This code: clean data 4, 10 year window 2013-2022
-40-49 yr old
+Next, we analyse how Highest Qualification Attained affects Singlehood in the 40-49 year old age group.
 ```{r, echo=FALSE}
 clean_data4 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data4.csv")
 
-# Convert Year to a factor
 clean_data4$Year <- as.factor(clean_data4$Year)
 
-# Define the order of legend labels
 legend_order <- c("Below Secondary", "Secondary", "Post Secondary", "Diploma & Professional Qualification", "University")
 
-# Love-themed color palette
 love_colors <- c("#E4CDD3", "#E48397", "#E24767", "#B51A3A", "#5E081E")
 
-# Create Plot of Education Level vs Singlehood
 ggplot(clean_data4, aes(x = Year)) +
   geom_line(aes(y = Below.Secondary, color = "Below Secondary", group = 1)) +
   geom_line(aes(y = Secondary, color = "Secondary", group = 1)) +
@@ -132,20 +72,22 @@ ggplot(clean_data4, aes(x = Year)) +
   theme_void() +  
   theme(
     legend.position = "bottom",
-    plot.title = element_text(hjust = 0.5, size = 14),  # Adjust the size of the title text
+    plot.title = element_text(hjust = 0.5, size = 14),  
     plot.margin = margin(b = 40, t = 20),
-    axis.title.y = element_text(size = 10, angle = 90, margin = margin(r = 10)),  # Make y-axis label vertical
+    axis.title.y = element_text(size = 10, angle = 90, margin = margin(r = 10)),  
     axis.title.x = element_text(size = 10, angle = 0, margin = margin(r = 10)),
-    axis.text = element_text(size = 10),  # Adjust the size of the axis text
-    legend.text = element_text(size = 7),  # Adjust the size of the legend text
-    legend.title = element_blank(),  # Remove legend title
-    legend.spacing.x = unit(0.1, 'cm')  # Adjust spacing between legend items
+    axis.text = element_text(size = 10),  
+    legend.text = element_text(size = 7),  
+    legend.title = element_blank(),  
+    legend.spacing.x = unit(0.1, 'cm')  
   )
 ```
 
-to edit: labels. change underscore to what i want
+## Comparison between Highest Qualification Attained and Singlehood
 <iframe height="600" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp/"> </iframe>
 
+(provide further explanation)
 
-
+## Conclusion {style="color: #DE3163"}
+(provide further explanation)
 

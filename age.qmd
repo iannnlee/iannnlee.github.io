@@ -1,67 +1,63 @@
 ---
 title: "Age VS Singlehood"
 ---
-## Does age affect singlehood? {style="color: #FE4164"}
+# Does age affect singlehood? {style="color: #FE4164"}
 
-#### (placeholder) {style="color: black"}
-Now, we look at the status of the population. How many people are single? 
-The graphs below provides further insight.
+## General Trend {style="color: black"}
+Now, we explore at the marriage status of the population. <br> How many people are **single**? <br>
+Is **AGE** a potential factor that affects Singlehood? <br> The graphs below provides further insight.
 
 ```{r, echo=FALSE}
-# Load the ggplot2 library
 suppressMessages(library(ggplot2))
 
-# Read the CSV file into a data frame
 data <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data5.csv")
 
-# Rename columns for better compatibility
 colnames(data) <- c("Year", "Single_30_39", "Non_Single_30_39")
 
-# Reshape the data for better compatibility with ggplot2
 library(tidyr)
 data_long <- gather(data, key = "Status", value = "Percentage", -Year)
 
-# Create a stacked bar graph using ggplot with specified colors
 ggplot(data_long, aes(x = Year, y = Percentage, fill = Status)) +
   geom_bar(stat = "identity", color = "black") +
-  labs(title = "Stacked Bar Graph of 30-39 Years", y = "Percentage", x = "Year") +
+  labs(title = "Marriage Status of 30-39 Years", y = "Percentage", x = "Year") +
   scale_fill_manual(values = c("#B76E79", "#FFCCCC"), 
                     labels = c("Non-Single (30-39)", "Single (30-39)")) +
   scale_x_continuous(breaks = unique(data$Year), labels = unique(data$Year)) +
-  theme_minimal()
+  theme_minimal()+
+  theme(plot.title = element_text(hjust = 0.5))
 
 ```
 
 ```{r, echo=FALSE}
-# Load the ggplot2 library
 suppressMessages(library(ggplot2))
 
-# Read the CSV file into a data frame
 data <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data6.csv")
 
-# Rename columns for better compatibility
 colnames(data) <- c("Year", "Single_40_49", "Non_Single_40_49")
 
-# Reshape the data for better compatibility with ggplot2
 library(tidyr)
 data_long <- gather(data, key = "Status", value = "Percentage", -Year)
 
-# Create a stacked bar graph using ggplot with specified colors
 ggplot(data_long, aes(x = Year, y = Percentage, fill = Status)) +
   geom_bar(stat = "identity", color = "black") +
-  labs(title = "Stacked Bar Graph of 40-49 Years", y = "Percentage", x = "Year") +
+  labs(title = "Marriage Status of 40-49 Years", y = "Percentage", x = "Year") +
   scale_fill_manual(values = c("#B76E79", "#FFCCCC"), 
                     labels = c("Non-Single (40-49)", "Single (40-49)")) +
   scale_x_continuous(breaks = unique(data$Year), labels = unique(data$Year)) +
-  theme_minimal()
+  theme_minimal()+
+  theme(plot.title = element_text(hjust = 0.5))
 ```
-#### (placeholder) {style="color: black"}
-<iframe height="500" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp2/"> </iframe>
-
-For "Single by Age Group" comparison, the data were from the following years:
+## Singlehood by Age Group {style="color: black"}
+For "Singlehood by Age Group" comparison, the data were from the following years:
 <br>
 10 Year Span: 2013-2022 
 <br> 
 5 Year Span: 2018-2022
 <br>
 2 Year Span: 2021-2022
+<br>
+*_(click below to see the averages of the 2 different age groups)_*
+<iframe height="500" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp2/"> </iframe>
+
+## Conclusion {style="color: #DE3163"}
+Age is also a factor that affects Singlehood. <br> The results have shown that as Age increases, the percentage of Singles in the population decreases. <br> This trend is to be expected as more people will get married as they become older, with increased financial stability and increasing societal pressure to get married. 

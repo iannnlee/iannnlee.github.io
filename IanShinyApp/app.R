@@ -7,11 +7,11 @@ clean_data3 <- read.csv("clean_data3.csv")
 clean_data4 <- read.csv("clean_data4.csv")
 
 # Rename columns
-colnames(clean_data3) <- c("Year", "Below_Secondary", "Secondary", "Post_Secondary", "Diploma_Professional_Qualification", "University")
-colnames(clean_data4) <- c("Year", "Below_Secondary", "Secondary", "Post_Secondary", "Diploma_Professional_Qualification", "University")
+colnames(clean_data3) <- c("Year", "Below Secondary", "Secondary", "Post-Secondary (Non-Tertiary)", "Diploma & Professional Qualification", "University")
+colnames(clean_data4) <- c("Year", "Below Secondary", "Secondary", "Post-Secondary (Non-Tertiary)", "Diploma & Professional Qualification", "University")
 
 # Define legend_order
-legend_order <- c("Below_Secondary", "Secondary", "Post_Secondary", "Diploma_Professional_Qualification", "University")
+legend_order <- c("Below Secondary", "Secondary", "Post-Secondary (Non-Tertiary)", "Diploma & Professional Qualification", "University")
 
 # Love-themed color palette
 love_colors <- c("#E4CDD3", "#E48397", "#E24767", "#B51A3A", "#5E081E")
