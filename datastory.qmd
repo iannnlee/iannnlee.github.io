@@ -8,11 +8,12 @@ title: "About My Project"
 
 This project aims to...(provide further explanation)
 
-Curious to find out more? Click the picture below!
-(find an article)
+Curious to find out more? Click the picture below! (find an article)
 
 #### General Trend from 1990-2022 {style="color: black"}
+
 This graph represents the percentage of population Single, among those aged 30-39 years old. <br>The general trend for 40-49 years old is similar to the graph below, but with a slightly lower percentage of singles across the board.
+
 ```{r, echo=FALSE}
 suppressMessages(library("tidyverse"))
 
@@ -50,6 +51,7 @@ ggplot(clean_data, aes(x = Year)) +
     legend.spacing.x = unit(0.1, 'cm')  # Adjust spacing between legend items
   )
 ```
+
 #### General Trend from 2013-2022 {style="color: black"}
 
 In order to make this project more relevant to the current situation, I have chosen the 10 most recent years (2013-2022) to conduct my analysis.
@@ -91,4 +93,3 @@ ggplot(clean_data3, aes(x = Year)) +
     legend.spacing.x = unit(0.1, 'cm')  
   )
 ```
-

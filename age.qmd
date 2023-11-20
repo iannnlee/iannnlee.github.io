@@ -1,11 +1,12 @@
 ---
 title: "Age VS Singlehood"
 ---
+
 # Does age affect singlehood? {style="color: #FE4164"}
 
 ## General Trend {style="color: black"}
-Now, we explore at the marriage status of the population. <br> How many people are **single**? <br>
-Is **AGE** a potential factor that affects Singlehood? <br> The graphs below provides further insight.
+
+Now, we explore at the marriage status of the population. <br> How many people are **single**? <br> Is **AGE** a potential factor that affects Singlehood? <br> The graphs below provides further insight.
 
 ```{r, echo=FALSE}
 suppressMessages(library(ggplot2))
@@ -47,17 +48,11 @@ ggplot(data_long, aes(x = Year, y = Percentage, fill = Status)) +
   theme_minimal()+
   theme(plot.title = element_text(hjust = 0.5))
 ```
+
 ## Singlehood by Age Group {style="color: black"}
-For "Singlehood by Age Group" comparison, the data were from the following years:
-<br>
-10 Year Span: 2013-2022 
-<br> 
-5 Year Span: 2018-2022
-<br>
-2 Year Span: 2021-2022
-<br>
-*_(click below to see the averages of the 2 different age groups)_*
-<iframe height="500" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp2/"> </iframe>
+
+For "Singlehood by Age Group" comparison, the data were from the following years: <br> 10 Year Span: 2013-2022 <br> 5 Year Span: 2018-2022 <br> 2 Year Span: 2021-2022 <br> *(click below to see the averages of the 2 different age groups)* <iframe height="500" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp2/"> </iframe>
 
 ## Conclusion {style="color: #DE3163"}
-Age is also a factor that affects Singlehood. <br> The results have shown that as Age increases, the percentage of Singles in the population decreases. <br> This trend is to be expected as more people will get married as they become older, with increased financial stability and increasing societal pressure to get married. 
+
+Age is also a factor that affects Singlehood. <br> The results have shown that as Age increases, the percentage of Singles in the population decreases. <br> This trend is to be expected as more people will get married as they become older, with increased financial stability and increasing societal pressure to get married.
