@@ -66,8 +66,8 @@
     "objectID": "datastory.html#why-are-singaporeans-single",
     "href": "datastory.html#why-are-singaporeans-single",
     "title": "About My Project",
-    "section": "Why are Singaporeans single?",
-    "text": "Why are Singaporeans single?\nThis project aims to…\nCurious to find out more? Click the picture below!\n\nGeneral Trend from 1990-2022\nThis graph represents the percentage of population Single, among those aged 30-39 years old. The general trend for 40-49 years old is similar to the graph below, but with a slightly lower percentage of singles across the board.\n\n\n\n\n\n\n\nGeneral Trend from 2013-2022\nIn order to make this project more relevant to the current situation, I have chosen the 10 most recent years (2013-2022) to conduct my analysis."
+    "section": "Why are Singaporeans Single?",
+    "text": "Why are Singaporeans Single?\nThis project aims to…(provide further explanation)\nCurious to find out more? Click the picture below! (find an article)\n\nGeneral Trend from 1990-2022\nThis graph represents the percentage of population Single, among those aged 30-39 years old. The general trend for 40-49 years old is similar to the graph below, but with a slightly lower percentage of singles across the board.\n\n\n\n\n\n\n\nGeneral Trend from 2013-2022\nIn order to make this project more relevant to the current situation, I have chosen the 10 most recent years (2013-2022) to conduct my analysis."
   },
   {
     "objectID": "spare.html",
@@ -165,7 +165,7 @@
     "href": "Qualification.html#conclusion",
     "title": "Qualification Attained VS Singlehood",
     "section": "Conclusion",
-    "text": "Conclusion"
+    "text": "Conclusion\n(provide further explanation)"
   },
   {
     "objectID": "Qualification.html#general-trend",
@@ -179,7 +179,7 @@
     "href": "Qualification.html#comparison-between-highest-qualification-attained-and-singlehood",
     "title": "Qualification Attained VS Singlehood",
     "section": "Comparison between Highest Qualification Attained and Singlehood",
-    "text": "Comparison between Highest Qualification Attained and Singlehood\n\n\nWe can see that those that fall under the University category have a higher percentage of singles as compared to Secondary."
+    "text": "Comparison between Highest Qualification Attained and Singlehood\n\n\n(provide further explanation)"
   },
   {
     "objectID": "age.html#general-trend",
@@ -205,6 +205,27 @@
   {
     "objectID": "qualification.html#conclusion",
     "href": "qualification.html#conclusion",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "Conclusion",
+    "text": "Conclusion\n(provide further explanation)"
+  },
+  {
+    "objectID": "qual.html#general-trend",
+    "href": "qual.html#general-trend",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "General Trend",
+    "text": "General Trend\nFirstly, we analyse how Highest Qualification Attained affects Singlehood in the 30-39 year old age group.\n\n\n\n\n\nNext, we analyse how Highest Qualification Attained affects Singlehood in the 40-49 year old age group."
+  },
+  {
+    "objectID": "qual.html#comparison-between-highest-qualification-attained-and-singlehood",
+    "href": "qual.html#comparison-between-highest-qualification-attained-and-singlehood",
+    "title": "Qualification Attained VS Singlehood",
+    "section": "Comparison between Highest Qualification Attained and Singlehood",
+    "text": "Comparison between Highest Qualification Attained and Singlehood\n\n\n(provide further explanation)"
+  },
+  {
+    "objectID": "qual.html#conclusion",
+    "href": "qual.html#conclusion",
     "title": "Qualification Attained VS Singlehood",
     "section": "Conclusion",
     "text": "Conclusion\n(provide further explanation)"

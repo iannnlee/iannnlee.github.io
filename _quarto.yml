@@ -8,7 +8,8 @@ website:
     left:
       - href: datastory.qmd
         text: "Datastory"
-
+      - href: qual.qmd
+        text: "Qualification Attained VS Singlehood"
       - href: age.qmd
         text: "Age vs Singlehood"
       - href: index.qmd

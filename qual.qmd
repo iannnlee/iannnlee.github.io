@@ -1,0 +1,98 @@
+---
+title: "Qualification Attained VS Singlehood"
+---
+
+## Does Highest Qualification Attained Affect Singlehood? {style="color: #FE4164"}
+
+## General Trend {style="color: black"}
+
+Firstly, we analyse how Highest Qualification Attained affects Singlehood in the 30-39 year old age group.
+
+```{r, echo=FALSE}
+suppressMessages(library("tidyverse"))
+
+
+clean_data3 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data3.csv")
+
+clean_data3$Year <- as.factor(clean_data3$Year)
+
+legend_order <- c("Below Secondary", "Secondary", "Post Secondary", "Diploma & Professional Qualification", "University")
+
+love_colors <- c("#E4CDD3", "#E48397", "#E24767", "#B51A3A", "#5E081E")
+
+ggplot(clean_data3, aes(x = Year)) +
+  geom_line(aes(y = Below.Secondary, color = "Below Secondary", group = 1)) +
+  geom_line(aes(y = Secondary, color = "Secondary", group = 1)) +
+  geom_line(aes(y = Post.Secondary..Non.Tertiary., color = "Post Secondary", group = 1)) +
+  geom_line(aes(y = Diploma...Professional.Qualification, color = "Diploma & Professional Qualification", group = 1)) +
+  geom_line(aes(y = University, color = "University", group = 1)) +
+  labs(
+    title = "How does Education level affect Singlehood?\n(30-39 Years Old)",  
+    x = "Year",
+    y = "% of Population, Single"
+  ) +
+  scale_color_manual(values = setNames(love_colors, legend_order),
+                     breaks = legend_order) +
+  theme_void() +  
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(hjust = 0.5, size = 14),  
+    plot.margin = margin(b = 40, t = 20),
+    axis.title.y = element_text(size = 10, angle = 90, margin = margin(r = 10)),   
+    axis.title.x = element_text(size = 10, angle = 0, margin = margin(r = 10)),
+    axis.text = element_text(size = 10),  
+    legend.text = element_text(size = 7),  
+    legend.title = element_blank(),  
+    legend.spacing.x = unit(0.1, 'cm')  
+  )
+```
+
+Next, we analyse how Highest Qualification Attained affects Singlehood in the 40-49 year old age group.
+
+```{r, echo=FALSE}
+clean_data4 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data4.csv")
+
+clean_data4$Year <- as.factor(clean_data4$Year)
+
+legend_order <- c("Below Secondary", "Secondary", "Post Secondary", "Diploma & Professional Qualification", "University")
+
+love_colors <- c("#E4CDD3", "#E48397", "#E24767", "#B51A3A", "#5E081E")
+
+ggplot(clean_data4, aes(x = Year)) +
+  geom_line(aes(y = Below.Secondary, color = "Below Secondary", group = 1)) +
+  geom_line(aes(y = Secondary, color = "Secondary", group = 1)) +
+  geom_line(aes(y = Post.Secondary..Non.Tertiary., color = "Post Secondary", group = 1)) +
+  geom_line(aes(y = Diploma...Professional.Qualification, color = "Diploma & Professional Qualification", group = 1)) +
+  geom_line(aes(y = University, color = "University", group = 1)) +
+  labs(
+    title = "How does Education level affect Singlehood?\n(40-49 Years Old)",  
+    x = "Year",
+    y = "% of Population, Single"
+  ) +
+  scale_color_manual(values = setNames(love_colors, legend_order),
+                     breaks = legend_order) +
+  theme_void() +  
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(hjust = 0.5, size = 14),  
+    plot.margin = margin(b = 40, t = 20),
+    axis.title.y = element_text(size = 10, angle = 90, margin = margin(r = 10)),  
+    axis.title.x = element_text(size = 10, angle = 0, margin = margin(r = 10)),
+    axis.text = element_text(size = 10),  
+    legend.text = element_text(size = 7),  
+    legend.title = element_blank(),  
+    legend.spacing.x = unit(0.1, 'cm')  
+  )
+```
+
+## Comparison between Highest Qualification Attained and Singlehood
+
+<iframe height="600" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp/">
+
+</iframe>
+
+(provide further explanation)
+
+## Conclusion {style="color: #DE3163"}
+
+(provide further explanation)
