@@ -1,11 +1,13 @@
 ---
 title: "Qualification Attained VS Singlehood"
 ---
+
 ## Does Highest Qualification Attained Affect Singlehood? {style="color: #FE4164"}
 
 ## General Trend {style="color: black"}
 
 Firstly, we analyse how Highest Qualification Attained affects Singlehood in the 30-39 year old age group.
+
 ```{r, echo=FALSE}
 suppressMessages(library("tidyverse"))
 
@@ -45,8 +47,8 @@ ggplot(clean_data3, aes(x = Year)) +
   )
 ```
 
-
 Next, we analyse how Highest Qualification Attained affects Singlehood in the 40-49 year old age group.
+
 ```{r, echo=FALSE}
 clean_data4 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data4.csv")
 
@@ -84,10 +86,13 @@ ggplot(clean_data4, aes(x = Year)) +
 ```
 
 ## Comparison between Highest Qualification Attained and Singlehood
-<iframe height="600" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp/"> </iframe>
+
+<iframe height="600" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp/">
+
+</iframe>
 
 (provide further explanation)
 
 ## Conclusion {style="color: #DE3163"}
-(provide further explanation)
 
+(provide further explanation)
