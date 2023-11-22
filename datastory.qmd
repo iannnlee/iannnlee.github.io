@@ -9,7 +9,7 @@ title: "About My Project"
 Over the last 10 years, there has been a **rise in Singlehood**. <br> Singlehood refers to the state of being single. Single refers to a person who has never married. <br> 
 This project aims to analyse the population of singles in Singapore and potential factors behind why people are not getting married.
 
-Curious to find out more? Here's an article just for you! <br> Click the picture below! (find an article)
+Curious to find out more? Here's an article just for you! <br> Click the picture below! 
 
 <a href="https://www.todayonline.com/singapore/2020-census-more-singles-singapore-all-age-groups-rate-population-growth-slowest-1970" target="_blank"> ![](duckread.jpeg){style="color: black" fig-align="center" width="1080"} </a>
 
