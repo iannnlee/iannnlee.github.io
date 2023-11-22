@@ -1,19 +1,15 @@
-# Load the necessary libraries
 library(shiny)
 library(ggplot2)
 library(tidyr)
 
-# Read the first CSV file
 data1 <- read.csv("clean_data5.csv")
 colnames(data1) <- c("Year", "Single_30_39", "Non_Single_30_39")
 data_long1 <- gather(data1, key = "Status", value = "Percentage", -Year)
 
-# Read the second CSV file
 data2 <- read.csv("clean_data6.csv")
 colnames(data2) <- c("Year", "Single_40_49", "Non_Single_40_49")
 data_long2 <- gather(data2, key = "Status", value = "Percentage", -Year)
 
-# Define the UI
 ui <- fluidPage(
   titlePanel("Singles Averages by Age Group"),
   sidebarLayout(
@@ -28,10 +24,8 @@ ui <- fluidPage(
   )
 )
 
-# Define the server logic
 server <- function(input, output, session) {
   
-  # Function to calculate average percentages
   calculateAverages <- function(data, status, minYear, maxYear) {
     subset_data <- subset(data, Status == status & Year >= minYear & Year <= maxYear)
     return(mean(subset_data$Percentage))
@@ -41,8 +35,7 @@ server <- function(input, output, session) {
     input$averageDuration
     updateSelectInput(session, "averageDuration", selected = input$averageDuration)
   })
-  
-  # Calculate average percentages based on user input
+
   output$averageNumbers <- renderText({
     if (input$averageDuration == "10-year") {
       minYear <- 2013

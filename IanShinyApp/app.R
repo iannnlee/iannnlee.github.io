@@ -1,28 +1,22 @@
-# Load libraries
 library(shiny)
 library(ggplot2)
 
-# Read data
 clean_data3 <- read.csv("clean_data3.csv")
 clean_data4 <- read.csv("clean_data4.csv")
 
-# Rename columns
 colnames(clean_data3) <- c("Year", "Below Secondary", "Secondary", "Post-Secondary (Non-Tertiary)", "Diploma & Professional Qualification", "University")
 colnames(clean_data4) <- c("Year", "Below Secondary", "Secondary", "Post-Secondary (Non-Tertiary)", "Diploma & Professional Qualification", "University")
 
-# Define legend_order
 legend_order <- c("Below Secondary", "Secondary", "Post-Secondary (Non-Tertiary)", "Diploma & Professional Qualification", "University")
 
-# Love-themed color palette
 love_colors <- c("#E4CDD3", "#E48397", "#E24767", "#B51A3A", "#5E081E")
 
-# Define UI
 ui <- fluidPage(
-  titlePanel("Education Level vs Singlehood"),
+  titlePanel("Highest Qualification Attained vs Singlehood"),
   sidebarLayout(
     sidebarPanel(
       selectInput("age_group", "Select Age Group", c("30-39", "40-49")),
-      checkboxGroupInput("education_type", "Select Education Type", choices = legend_order, selected = character(0))
+      checkboxGroupInput("education_type", "Select Highest Qualification Attained", choices = legend_order, selected = character(0))
     ),
     mainPanel(
       plotOutput("plot1")
@@ -30,17 +24,15 @@ ui <- fluidPage(
   )
 )
 
-# Define server
 server <- function(input, output) {
   
-  # Function to generate plots
   generate_plot <- function(data, age_group, education_types) {
     ggplot(data, aes(x = Year)) +
       lapply(education_types, function(education_type) {
         geom_line(aes(y = get(education_type), color = education_type, group = education_type))
       }) +
       labs(
-        title = paste("How does Education level affect Singlehood?\n(", age_group, "Years Old)"),  
+        title = paste("How does Highest Qualification Attained affect Singlehood?\n(", age_group, "Years Old)"),  
         x = "Year",
         y = "% of Population, Single"
       ) +
@@ -61,7 +53,6 @@ server <- function(input, output) {
       )
   }
   
-  # Render plot1
   output$plot1 <- renderPlot({
     age_group <- input$age_group
     education_types <- input$education_type

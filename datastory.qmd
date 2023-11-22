@@ -4,13 +4,16 @@ title: "About My Project"
 
 ![](https://static.vecteezy.com/system/resources/previews/006/637/761/original/continuous-line-drawing-of-love-sign-with-two-hearts-embracing-simple-design-on-white-background-free-vector.jpg)
 
-## Why are Singaporeans Single? {style="color: deeppink"}
+# Feeling Single? <br> You're Not Alone! {style="color: deeppink"}
 
-This project aims to...(provide further explanation)
+Over the last 10 years, there has been a **rise in Singlehood**. <br> Singlehood refers to the state of being single. Single refers to a person who has never married. <br> 
+This project aims to analyse the population of singles in Singapore and potential factors behind why people are not getting married.
 
-Curious to find out more? Click the picture below! (find an article)
+Curious to find out more? Here's an article just for you! <br> Click the picture below! (find an article)
 
-#### General Trend from 1990-2022 {style="color: black"}
+<a href="https://www.todayonline.com/singapore/2020-census-more-singles-singapore-all-age-groups-rate-population-growth-slowest-1970" target="_blank"> ![](duckread.jpeg){style="color: black" fig-align="center" width="1080"} </a>
+
+## General Trend from 1990-2022 {style="color: black"}
 
 This graph represents the percentage of population Single, among those aged 30-39 years old. <br>The general trend for 40-49 years old is similar to the graph below, but with a slightly lower percentage of singles across the board.
 
@@ -52,7 +55,7 @@ ggplot(clean_data, aes(x = Year)) +
   )
 ```
 
-#### General Trend from 2013-2022 {style="color: black"}
+## General Trend from 2013-2022 {style="color: black"}
 
 In order to make this project more relevant to the current situation, I have chosen the 10 most recent years (2013-2022) to conduct my analysis.
 

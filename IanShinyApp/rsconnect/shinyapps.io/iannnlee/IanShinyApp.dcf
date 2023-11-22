@@ -5,7 +5,7 @@ account: iannnlee
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10307563
-bundleId: 7946939
+bundleId: 7956144
 url: https://iannnlee.shinyapps.io/IanShinyApp/
 version: 1
 asMultiple: FALSE

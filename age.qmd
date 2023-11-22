@@ -2,7 +2,7 @@
 title: "Age VS Singlehood"
 ---
 
-# Does age affect singlehood? {style="color: #FE4164"}
+# Does Age Affect Singlehood? {style="color: #FE4164"}
 
 ## General Trend {style="color: black"}
 
@@ -49,7 +49,7 @@ ggplot(data_long, aes(x = Year, y = Percentage, fill = Status)) +
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-## Singlehood by Age Group {style="color: black"}
+## Comparison between Age and Singlehood {style="color: black"}
 
 For "Singlehood by Age Group" comparison, the data were from the following years: <br> 10 Year Span: 2013-2022 <br> 5 Year Span: 2018-2022 <br> 2 Year Span: 2021-2022 <br> *(click below to see the averages of the 2 different age groups)* <iframe height="500" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp2/"> </iframe>
 

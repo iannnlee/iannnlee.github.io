@@ -2,7 +2,7 @@
 title: "Qualification Attained VS Singlehood"
 ---
 
-## Does Highest Qualification Attained Affect Singlehood? {style="color: #FE4164"}
+# Does Highest Qualification Attained Affect Singlehood? {style="color: #FE4164"}
 
 ## General Trend {style="color: black"}
 
@@ -47,7 +47,7 @@ ggplot(clean_data3, aes(x = Year)) +
   )
 ```
 
-Next, we analyse how Highest Qualification Attained affects Singlehood in the 40-49 year old age group.
+Next, we analyse how Highest Qualification Attained affects Singlehood in the 40-49 year old age group.The general trend is consistent among the 2 age groups. 
 
 ```{r, echo=FALSE}
 clean_data4 <- read.csv("/Users/iannnlee/Documents/GitHub/iannnlee.github.io/iannnlee.github.io/clean_data4.csv")
@@ -86,13 +86,11 @@ ggplot(clean_data4, aes(x = Year)) +
 ```
 
 ## Comparison between Highest Qualification Attained and Singlehood
+The app below provides a clearer comparison between Highest Qualification Attained and Singlehood. <br> Select the age group you would like to view. <br> Then select the Highest Qualification Attained you would like to compare. <br> *_(tick boxes to view)_*
 
 <iframe height="600" width="100%" frameborder="no" src="https://iannnlee.shinyapps.io/IanShinyApp/">
 
 </iframe>
 
-(provide further explanation)
-
 ## Conclusion {style="color: #DE3163"}
-
-(provide further explanation)
+Highest Qualification Attained proves to be a factor that affects Singlehood. The results have shown that a higher qualification attained generally sees a higher percentage of Singles in the population. This is most evident when comparing Secondary and University. <br> Below Secondary did not have the lowest percentage of Singles. However, this may be skewed due to a smaller sample size, with more people having access to education in Singapore. 
