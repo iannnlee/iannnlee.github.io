@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "About Me!",
     "section": "",
-    "text": "Ian’s Website!!\n\nWelcome to my website!\n\n\n\nVirtual hug for you! I hope you are having a great day!!!\n\n\nHello, I’m Ian!  I’m currently in my third year as a Business Administration student with a specialisation in finance. I’m excited to be taking NM2207 in Semester 1 of the academic year 2023/2024.\nIn my free time, I’m an avid sports enthusiast, particularly passionate about basketball and football. I proudly support the LA Lakers and enjoy watching their games. I used to enjoy playing basketball as well but I got lazy :)\nLink to my Github: https://github.com/iannnlee/nm2207"
+    "text": "Ian’s Website!!\n\nWelcome to my website!\n\n\n\nVirtual hug for you! I hope you are having a great day!!!\n\n\nHello, I’m Ian!  I’m currently in my third year as a Business Administration student with a specialisation in finance. I’m excited to be taking NM2207 in Semester 1 of the academic year 2023/2024.\nIn my free time, I’m an avid sports enthusiast, particularly passionate about basketball and football. I proudly support the LA Lakers and enjoy watching their games. I used to enjoy playing basketball as well!!  But… I got lazy :) I am now a couch potato.\nLink to my Github: https://github.com/iannnlee/nm2207"
   },
   {
     "objectID": "index.html#welcome-to-my-website",
@@ -249,7 +249,7 @@
     "href": "datastory.html#general-trend-from-1990-2022",
     "title": "About My Project",
     "section": "General Trend from 1990-2022",
-    "text": "General Trend from 1990-2022\nThis graph represents the percentage of population Single, among those aged 30-39 years old. The general trend for 40-49 years old is similar to the graph below, but with a slightly lower percentage of singles across the board.\n\n\n\n\n\n\nGeneral Trend from 2013-2022\nIn order to make this project more relevant to the current situation, I have chosen the 10 most recent years (2013-2022) to conduct my analysis."
+    "text": "General Trend from 1990-2022\nThis graph represents the percentage of population Single, among those aged 30-39 years old. The general trend for 40-49 years old is similar to the graph below, but with a slightly lower percentage of singles across the board."
   },
   {
     "objectID": "qual.html",
@@ -257,5 +257,12 @@
     "title": "Qualification Attained VS Singlehood",
     "section": "",
     "text": "Firstly, we analyse how Highest Qualification Attained affects Singlehood in the 30-39 year old age group.\n\n\n\n\n\nNext, we analyse how Highest Qualification Attained affects Singlehood in the 40-49 year old age group.The general trend is consistent among the 2 age groups.\n\n\n\n\n\n\n\n\nThe app below provides a clearer comparison between Highest Qualification Attained and Singlehood.  Select the age group you would like to view.  Then select the Highest Qualification Attained you would like to compare.  (tick boxes to view)\n\n\n\n\n\nHighest Qualification Attained proves to be a factor that affects Singlehood. The results have shown that a higher qualification attained generally sees a higher percentage of Singles in the population. This is most evident when comparing Secondary and University.  Below Secondary did not have the lowest percentage of Singles. However, this may be skewed due to a smaller sample size, with more people having access to education in Singapore."
+  },
+  {
+    "objectID": "datastory.html#general-trend-from-2013-2022",
+    "href": "datastory.html#general-trend-from-2013-2022",
+    "title": "About My Project",
+    "section": "General Trend from 2013-2022",
+    "text": "General Trend from 2013-2022\nIn order to make this project more relevant to the current situation, I have chosen the 10 most recent years (2013-2022) to conduct my analysis."
   }
 ]
